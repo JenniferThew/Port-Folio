@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Jennifer's Portfolio{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+>
+
+{% endblock %} 
+
+{% block content %}
+<section class="hero">
+    <div class="hero-video-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="{{ url_for('static', filename='images/hero_video.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+    </div>
+    <div class="hero-text-container">
+        <div class="hero-content">
+            <h1 class="hero-heading">
+                Hi, I'm <span class="highlight">Jennifer Thew</span>
+            </h1>
+            <p class="hero-subtext">
+                A passionate Computer Science student dedicated to building <br>
+                innovative and efficient solutions that push the bondaries of <br>
+                technology.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Explore Projects</a>
+                <a href="#" class="btn-outline">Resume <span class="arrow-icon"> -> </span></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="featured-projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+    <div class="carousel-wrapper">
+        <div class="carousel-track">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-image" style="--bg-url: url('{{ url_for('static', filename='images/' ~ project.image)}}');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">{{project.title }}</h3>
+                    <p class="project-description">{{project.description}}</p>
+                    <a href="{{project.link}}" class="project-link">Learn More</a>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Duplicate for seamless loop -->
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-image" style="--bg-url: url('{{ url_for('static', filename='images/' ~ project.image)}}');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">{{project.title }}</h3>
+                    <p class="project-description">{{project.description}}</p>
+                    <a href="{{project.link}}" class="project-link">Learn More</a>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

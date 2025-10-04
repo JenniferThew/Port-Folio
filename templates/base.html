@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Jennifer's Port Folio{% endblock %}</title>
+
+        <link 
+            rel="stylesheet" 
+            href="{{ url_for('static', filename='css/style.css')}}"
+        >
+        <link 
+            rel="stylesheet" 
+            href="{{ url_for('static', filename='css/home.css')}}"
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+                <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                extend: {
+                    colors: {
+                    primary: "#1173d4",
+                    "background-light": "#f6f7f8",
+                    "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                    display: ["Space Grotesk"],
+                    },
+                    borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+                },
+                },
+            };
+            </script>
+    </head>
+  
+<body class="dark bg-background-dark font-display">
+
+    {% include 'includes/header.html' %}
+
+    <main>{% block content %}{% endblock %}</main>
+
+
+</body>
+
+</html>
