@@ -1,12 +1,12 @@
 <header class="header">
     <div class="nav-container">
-        <h2>Jennifer Thew</h2>
+        <h2><a href="{{ url_for('index') }}" class="brand-link">Jennifer's Portfolio</a></h2>
 
         <!-- Navigation bar -->
         <nav class="nav-links">
             <ul>
                 <li><a href="{{ url_for('about_me')}}">About Me</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="{{ url_for('projects')}}">Projects</a></li>
                 <li><a href="#" class="resume-btn">Resume</a></li>
 
             </ul>

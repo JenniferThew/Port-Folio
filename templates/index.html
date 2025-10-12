@@ -46,6 +46,11 @@
                 <div class="project-image" style="--bg-url: url('{{ url_for('static', filename='images/' ~ project.image)}}');"></div>
                 <div class="project-content">
                     <h3 class="project-title">{{project.title }}</h3>
+                    <ul class="tech-stack">
+                        {% for tech in project.tech %}
+                        <li>{{tech}}</li>
+                        {% endfor %}
+                    </ul>
                     <p class="project-description">{{project.description}}</p>
                     <a href="{{project.link}}" class="project-link">Learn More</a>
                 </div>
@@ -58,6 +63,11 @@
                 <div class="project-image" style="--bg-url: url('{{ url_for('static', filename='images/' ~ project.image)}}');"></div>
                 <div class="project-content">
                     <h3 class="project-title">{{project.title }}</h3>
+                    <ul class="tech-stack">
+                        {% for tech in project.tech %}
+                        <li>{{tech}}</li>
+                        {% endfor %}
+                    </ul>
                     <p class="project-description">{{project.description}}</p>
                     <a href="{{project.link}}" class="project-link">Learn More</a>
                 </div>

@@ -22,5 +22,12 @@ def about_me():
     right_column = skills[1::2]
     return render_template("about_me.html", experience_projects=experience_projects, left_column=left_column, right_column=right_column)
 
+@app.route("/projects")
+def projects():
+    with open('static/data/projects.json') as project:
+        projects = json.load(project)
+    
+    return render_template("projects.html", projects=projects)
+
 if __name__ == '__main__':
     app.run(debug=True)
