@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Scrum Master in FYP project",
+    "type": "Final Year Project",
+    "icon": "fa-users",
+    "points": [
+      "Facilitated Agile ceremonies including daily stand-ups, sprint planning, and retrospectives.",
+      "Coordinated team efforts to ensure timely delivery of project milestones.",
+      "Managed the product backlog and removed impediments to optimize workflow and productivity."
+    ]
+  },
+  {
+    "title": "Lead Programmer in Qientics project",
+    "type": "Academic Project",
+    "icon": "fa-code",
+    "points": [
+      "Led the development of the core application logic using Python and Django.",
+      "Designed and implemented the database schema, developed RESTful APIs, and integrated third-party services.",
+      "Mentored junior developers and conducted code reviews to maintain code quality."
+    ]
+  },
+  {
+    "title": "Leader in Coffee Bean project",
+    "type": "Personal Project",
+    "icon": "fa-rocket",
+    "points": [
+      "Conceptualized and led a team to build a mobile application for coffee enthusiasts.",
+      "Defined the project vision and managed the project timeline.",
+      "Successfully launched the app on the Google Play Store using React Native and Node.js."
+    ]
+  }
+]

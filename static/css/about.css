@@ -1,0 +1,231 @@
+.about_me {
+    position: relative;
+    height: 60vh;
+    min-height: 640px;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #101922;
+}
+
+.about_video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.about-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Use cover to fill the screen */
+    filter: brightness(0.75);
+}
+
+.about_text_container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: flex-start; /* Text on left side */
+    align-items: center;
+    min-height: 100vh;
+    text-align: justify;
+
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  font-family: 'Space Grotesk', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff, #cbd5e1, #1173d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .about_text_container {
+        padding: 2rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .about-heading {
+        font-size: 2.5rem;
+    }
+    
+    .about-description {
+        font-size: 1rem;
+    }
+}
+
+.project-experience {
+  padding: 4rem 2rem;
+  background-color: #101922;
+  color: #cbd5e1;
+}
+
+.project-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1173d4;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-icon i{
+    color: #1173d4;
+
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-type {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.project-points {
+  list-style: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #101922;
+  color: #cbd5e1;
+}
+
+.skills-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1173d4;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.skill-header i {
+  font-size: 1.5rem;
+  color: #1173d4;
+}
+
+.skill-bar {
+  background-color: #313d50;
+  height: 8px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #1173d4;
+  transition: width 1s ease;
+  width: var(--fill-width);
+}
+
+.skill-level {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* Animation */
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

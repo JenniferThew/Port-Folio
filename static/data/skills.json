@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Python",
+    "level": 80,
+    "icon": "fa-python"
+  },
+  {
+    "name": "C++",
+    "level": 62,
+    "icon": "fa-cplusplus"
+  },
+  {
+    "name": "SQL",
+    "level": 48,
+    "icon": "fa-database"
+  },
+  {
+    "name": "Java",
+    "level": 66,
+    "icon": "fa-java"
+  },
+  {
+    "name": "JavaScript",
+    "level": 70,
+    "icon": "fa-js"
+  },
+  {
+    "name": "React",
+    "level": 85,
+    "icon": "fa-react"
+  }
+]

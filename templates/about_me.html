@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}About me{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/about.css') }}"
+>
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+{% endblock %} 
+
+{% block content %}
+
+<section class="about_me">
+    <div class="about_video_container">
+        <video autoplay muted loop playsinline class="about-video">
+            <source src="{{ url_for('static', filename='images/about_me.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+    </div>
+
+    <div class="about_text_container">
+        <div class="about-content">
+            <h1 class="about-heading">
+                About Me
+            </h1>
+            <p class="about-description">
+                I hold a Diploma in Computer Science with a major in Cybersecurity, and I'm 
+                currently pursuing a Bachelor's degree in Computer Science, specializing in 
+                Software Development. Coding has always been a deep passion of mine - I enjoy 
+                solving complex problems and thrive on the challenges that come with buidling 
+                meaningful digital experiences. I'm committed to continuous learning and always 
+                ready to embrace new technologies and future challenges with curiosity and 
+                determination
+        </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="project-experience">
+    <h2 class="project-heading">Project-Based Experience</h2>
+    <div class="project-list">
+        {% for project in experience_projects %}
+        <div class="project-card animate-fade-in-up">
+            <div class="project-icon">
+                <i class="fas {{project.icon}}"></i>
+                <h3 class="project-title">{{project.title}}</h3>
+            </div>
+            <p class="project-type">{{project.type}}</p>
+            <ul class="project-points">
+                {% for point in project.points %}
+                    <li>{{point}}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="skills-section">
+    <h2 class="skills-heading">Skills</h2>
+    <div class="skills-list">
+        <div class="skills-column">
+            {% for skill in left_column %}
+            <div class="skill-card">
+                <div class="skill-header">
+                    <i class="fab {{ skill.icon}}"></i>
+                    <span class="skill-name">{{skill.name}}</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill-width: {{skill.level}}%;"></div>
+                </div>
+                <span class="skill-level">{{skill.level}} %</span>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="skills-column">
+            {% for skill in right_column %}
+            <div class="skill-card">
+                <div class="skill-header">
+                    <i class="fab {{ skill.icon}}"></i>
+                    <span class="skill-name">{{skill.name}}</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill-width: {{skill.level}}%;"></div>
+                </div>
+                <span class="skill-level">{{skill.level}} %</span>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
