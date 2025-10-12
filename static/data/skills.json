@@ -2,31 +2,41 @@
   {
     "name": "Python",
     "level": 80,
-    "icon": "fa-python"
+    "icon": "fa-python",
+    "prefix": "fab"
   },
   {
-    "name": "C++",
+    "name": "Git",
     "level": 62,
-    "icon": "fa-cplusplus"
+    "icon": "fa-github-square ",
+    "prefix": "fab"
+
   },
   {
     "name": "SQL",
     "level": 48,
-    "icon": "fa-database"
+    "icon": "fa-database",
+    "prefix": "fas"
+
   },
   {
     "name": "Java",
     "level": 66,
-    "icon": "fa-java"
+    "icon": "fa-java",
+    "prefix": "fab"
   },
   {
     "name": "JavaScript",
     "level": 70,
-    "icon": "fa-js"
+    "icon": "fa-js",
+    "prefix": "fab"
+
   },
   {
-    "name": "React",
+    "name": "HTML, CSS",
     "level": 85,
-    "icon": "fa-react"
+    "icon": "fa-css3",
+    "prefix": "fab"
+
   }
 ]

@@ -74,7 +74,7 @@
             {% for skill in left_column %}
             <div class="skill-card">
                 <div class="skill-header">
-                    <i class="fab {{ skill.icon}}"></i>
+                    <i class="{{ skill.prefix}} {{ skill.icon}}"></i>
                     <span class="skill-name">{{skill.name}}</span>
                 </div>
                 <div class="skill-bar">
@@ -89,7 +89,7 @@
             {% for skill in right_column %}
             <div class="skill-card">
                 <div class="skill-header">
-                    <i class="fab {{ skill.icon}}"></i>
+                    <i class="{{ skill.prefix}} {{ skill.icon}}"></i>
                     <span class="skill-name">{{skill.name}}</span>
                 </div>
                 <div class="skill-bar">
