@@ -1,38 +1,58 @@
 [
     {
-        "title": "Project A",
-        "description": "This is project A description",
-        "tech": ["MQTT", "SQL", "JavaScript"],
-        "image": "music_discovery_app.png",
-        "link": "#"
+        "title": "Qinetics Web Revamp Project",
+        "description": "Redesigned Qinetics' website and built an admin dashboard integrated with Google Analytics 4 for real-time visitor insights and job management.",
+        "tech": ["Python (Flask)", "MySQL", "Google Analytics Data API", "HTML", "CSS", "JavaScript"],
+        "image": "dashboard.png",
+        "slug": "fyp",
+        "detail_image": "dashboard_full.png",
+        "overview": "This project involved collaborating with a real client - Qinetics Solutions Sdn. Bhd. - to redesign and improve their corporate website. The main objectives were to enhance user experience, optimize SEO performance, and develop a secure Admin Dashboard for internal data analysis and job listing management.\nI was mainly responsible for backend development and for buidling the Analytics Dashboard, which is powered by Google Analytics 4 (GA4). The dashboard provides detailed insights such as visitor statistics, engagement rates, traffic sources and page performance through interactive visualizations.",
+        "challenges_solutions": "One of the major challenges was handling sensitive and incomplete analytics data. During testing, some GA4 data occasionally appeared as \"not set\" or empty values. To ensure data reliability, I implemented a cachiing system that refreshes the analytics data automatically. \nAnother challenge was the dashboard's loading delay caused by live GA4 fetching. To solve this, I used Flask-Caching with background threading, allowing the system to preload data - resulting in a smoother user experience.",
+        "outcomes": "Through this project, I gained valuable hands-on experience working with a real company and understanding client requirements. I improved my technical skills in Flask, Google Analytics API, and data visualization, while also learning how to communicate effectively with clients and teammates. \nThis project strengthened both my technical problem-solving and project coordication skills - bridging the gap between academic learning and real-world application."
     },
     {
-        "title": "Project B",
-        "description": "This is Project B description",
-        "tech": ["MQTT", "SQL", "JavaScript"],
-        "image": "music_discovery_app.png",
-        "link": "#"
+        "title": "Smart Garage Automation System",
+        "description": "An IoT Smart Home project featuring a Smart Garage System that automates gate control and lighting, with real-time monitoring and remote access through web and cloud dashboards.",
+        "tech": ["Arduino Uno", "Raspberry Pi", "Arduino IDE", "Python", "MQTT", "ThingsBoard"],
+        "image": "smart_garage.png",
+        "slug": "smart_garage",
+        "detail_image": "smart_garage.png",
+        "overview": "As part of a collaboration IoT Smart Home project, I developed the Smart Garage System, an intelligent garage automation solution that integrates sensors, actuators, and cloud connectivity. The system automates vehicle detection, gate operation, and lighting control while providing real-time monitoring through a Flask web dashboard and ThingsBoard cloud platform. It enhances home safety and convenience by allowing both automatic and remote manual operation, ensuring seamless control of the garage even when users are away",
+        "challenges_solutions": "During development, one of the main challenges was maintaining system functionality during internet or cloud service interruptions. I solved this by designing an edge computing architecture using a Raspberry Pi with a local MySQL database, allowing the system to operate independently while keeping data synchronized with the cloud once reconnected. Additionally, ensuring reliable communication between hardware, edge, and cloud components required an efficient messaging system, which I achieved by integrating MQTT protocol with Flask-SocketIO to handle real-time data transmission and remote control commands effectively.",
+        "outcomes": "The project successfully produced a fully functional smart garage prototype that supports automatic gate operation, vehicle detection, and motion-activated lighting. The integration of edge and cloud computing allowed users to monitor and control the system remotely through both web and cloud dashboards. The solution not only improved convenience and safety but also demonstrated the potential of IoT in creating reliable and autonomous home automation systems."
     },
     {
         "title": "Project C",
         "description": "This is Project C description",
         "tech": ["MQTT", "SQL", "JavaScript"],
-        "image": "music_discovery_app.png",
-        "link": "#"
+        "image": "calculatorSmall.png",
+        "slug": "#",
+        "detail_image": "calculator.png",
+        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
+        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
+        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
     },
     {
         "title": "Project D",
         "description": "This is Project D description",
         "tech": ["MQTT", "SQL", "JavaScript"],
         "image": "music_discovery_app.png",
-        "link": "#"
+        "slug": "#",
+        "detail_image": "dashboard.png",
+        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
+        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
+        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
     },
     {
         "title": "Project E",
         "description": "This is Project E description",
         "tech": ["MQTT", "SQL", "JavaScript"],
         "image": "music_discovery_app.png",
-        "link": "#"
+        "slug": "#",
+        "detail_image": "dashboard.png",
+        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
+        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
+        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
     }
 
 ]

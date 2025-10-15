@@ -1,0 +1,116 @@
+.project-detail-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Title & Hero Image --- */
+
+.project_detail-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+.project_detail-hero {
+    margin-bottom: 50px;
+    /* The image has a subtle dark green/teal background */
+    background-color: #20353a; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* --- Content Grid Layout (The core structure) --- */
+
+.project_detail-content-grid {
+    display: grid;
+    /* Create two columns: main content (3 parts) and sidebar (1 part) */
+    grid-template-columns: 3fr 1fr; 
+    gap: 80px; /* Space between the two columns */
+    align-items: start; /* Align items to the start of the grid cell */
+}
+
+
+/* --- Left Column: Main Details (Overview, Challenges, Outcomes) --- */
+
+
+
+.content_detail-block {
+    margin-bottom: 40px; /* Space between the text sections */
+}
+
+.content_detail-block h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f0f0f0; /* White/light text for headings */
+    border-bottom: 1px solid #333; /* Subtle line under the heading, if desired */
+    padding-bottom: 5px;
+}
+
+.content_detail-block p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #b0b0b0; /* Slightly lighter gray for body text */
+}
+
+
+/* --- Right Column: Sidebar (Tech & Links) --- */
+
+.sidebar {
+    position: sticky; /* Keeps the sidebar visible when scrolling the main content */
+    top: 20px; /* Distance from the top of the viewport */
+    padding-top: 5px; /* Alignment with the top of the 'Overview' text */
+}
+
+/* Technologies Used */
+.tech-used-block h3, 
+.links-block h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #00bcd4; /* The teal/blue accent color */
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: flex; /* Makes the tech items look like tags */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-list li {
+    background-color: #2a2a2a; /* Darker background for the tag pill */
+    color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* --- Responsiveness (Stack columns on small screens) --- */
+
+@media (max-width: 900px) {
+    .project-content-grid {
+        /* Switch to a single column */
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+
+    .sidebar {
+        /* Remove sticky positioning on mobile and place it near the top */
+        position: static;
+        order: -1; 
+    }
+}

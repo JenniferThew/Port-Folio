@@ -1,83 +1,135 @@
-.projects-section {
-  padding: 4rem 2rem;
-  background-color: #0f172a;
-  color: #cbd5e1;
+/* --- Section Header Styling --- */
+.Myprojects-section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.projects-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #1173d4;
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+/* --- Project List Container --- */
+.Myprojects-list {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 40px; /* Space between each project card */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.project-card {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  flex-wrap: wrap;
+/* --- Project Card Styling --- */
+.Myproject-card {
+    display: flex; /* Image and Content side-by-side */
+    align-items: center; 
+    border-radius: 12px;
+    background-color: transparent; /* Card background is part of the image/container */
+    /* Use a fixed height or min-height if all projects should look uniform */
 }
 
-.project-card.reverse {
-  flex-direction: row-reverse;
+/* --- Image Container Styling (The green/white boxes) --- */
+.Myproject-image {
+    flex: 1; /* Takes up half the space */
+    min-width: 30%;
+    /* No padding here, the image itself fills the space */
 }
 
-.project-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.Myproject-image img {
+width: 100%; /* Ensures the image takes full width of its container */
+    height: 350px; /* <--- Use a moderate height for a "normal card grid size" */
+    object-fit: cover; /* Keeps the image sharp and fills the space */
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
 }
 
-.project-content {
-  flex: 1;
-  max-width: 600px;
+/* --- Content Container Styling --- */
+.Myproject-content {
+    flex: 1; /* Takes up the other half of the space */
+    padding: 0 40px; /* Space around the text content */
+    text-align: left;
 }
 
-.project-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #e2e8f0;
+.Myproject-content h3 {
+    font-size: 1.7em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
-.project-content p {
-  margin-bottom: 1rem;
-  color: #94a3b8;
+.project-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #a0a0a0;
+    margin-top: 15px;
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+/* --- Tech Stack Styling (The blue text line) --- */
+.tech-stack-header {
+    font-size: 0.95em;
+    font-weight: 500;
+    margin: 0;
+    color: #1173d4; /* Bright color for technology names */
 }
 
-.tech-stack li {
-  background-color: #1e293b;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  color: #cbd5e1;
-}
-
+/* --- "View Project" Button Styling --- */
 .project-btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #1173d4;
-  color: white;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 8px 0;
+    color: #1173d4; /* Text color matching tech stack */
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #1173d4; /* Border for the button */
+    border-radius: 4px;
+    width: 150px; /* Fixed width for uniform buttons */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project-btn:hover {
-  background-color: #0e5bb5;
+    background-color: #1173d4;
+    color: #121212; /* Dark background on hover */
+}
+
+/* ------------------------------------- */
+/* --- ZIG-ZAG (ALTERNATING) LAYOUT --- */
+/* ------------------------------------- */
+
+/* Apply this class to every second card using Jinja's 'loop.index is odd' */
+.Myproject-card.reverse {
+    /* Reverses the order of the flex items: Content on Left, Image on Right */
+    flex-direction: row-reverse; 
+}
+
+/* Adjust padding for reversed layout */
+.Myproject-card.reverse .Myproject-content {
+    padding: 0 40px; /* Maintain padding */
+    text-align: right; /* Align text to the right when content is on the left side */
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    /* On smaller screens, stack the image and content vertically */
+    .Myproject-card,
+    .Myproject-card.reverse {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Myproject-image {
+        margin-bottom: 20px;
+    }
+
+    .Myproject-content,
+    .Myproject-card.reverse .Myproject-content {
+        padding: 0; /* Remove horizontal padding */
+        text-align: left; /* Always align text left on mobile */
+    }
+
+    .project-btn {
+        width: 100%; /* Full width button on mobile */
+    }
 }

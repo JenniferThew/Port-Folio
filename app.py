@@ -29,5 +29,17 @@ def projects():
     
     return render_template("projects.html", projects=projects)
 
+@app.route("/projects/<slug>")
+def project_detail(slug):
+    with open('static/data/projects.json') as project:
+        projects = json.load(project)
+    
+    project = next((p for p in projects if p["slug"] == slug), None)
+
+    if not project:
+        ConnectionAbortedError(404)
+    
+    return render_template("project_detail.html", project=project)
+
 if __name__ == '__main__':
     app.run(debug=True)

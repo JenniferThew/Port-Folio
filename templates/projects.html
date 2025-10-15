@@ -16,53 +16,28 @@
 {% endblock %} 
 
 {% block content %}
-<section class="projects-section">
-    <h2 class="section-title">My projects</h2>
-    <div class="projects-list">
-        <!-- Left Column -->
-         <div class="projects-column">
-            {% for project in left_column %}
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename='images/' ~ project.image) }}" alt="{{ project.title }}">
-                </div>
-                <div class="project-content">
-                    <h3>{{ project.title}}</h3>
-                    <p>{{ project.description }}</p>
-                    <ul class="tech-stack">
-                        {% for tech in project.tech %}
-                        <li>{{ tech }}</li>
-                        {% endfor %}
-                    </ul>
-                    <a href="{{ project.link }}" class="project-btn">View Projects</a>
-                </div>
+<section class="Myprojects-section">
+    <h1 class="section-title">My Projects</h1>
+    <!-- <p class="section-subtitle">A selection of projects showcasing my skills and experience in computer science.</p> -->
+    <div class="Myprojects-list">
+        {% for project in projects %}
+        <div class="Myproject-card {% if loop.index is even %}reverse{% endif %}">
+            <div class="Myproject-image">
+                <img src="{{ url_for('static', filename='images/' ~ project.image) }}" alt="{{ project.title }}">
             </div>
-            {% endfor %}
-         </div>
-
-         <!-- Right Column -->
-         <div class="projects-column">
-            {% for project in right_column %}
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename='images/' ~ project.image) }}" alt="{{ project.title }}">
-                </div>
-                <div class="project-content">
-                    <h3>{{ project.title}}</h3>
-                    <p>{{ project.description }}</p>
-                    <ul class="tech-stack">
-                        {% for tech in project.tech %}
-                        <li>{{ tech }}</li>
-                        {% endfor %}
-                    </ul>
-                    <a href="{{ project.link }}" class="project-btn">View Projects</a>
-                </div>
+            <div class="Myproject-content">
+                <h3>{{ project.title}}</h3>
+                <p class="tech-stack-header">
+                    {% for tech in project.tech %}
+                    <span class="tech-item">{{ tech }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <p class="project-description">{{ project.description }}</p>
+                <a href="{{ url_for('project_detail', slug=project.slug) }}" class="project-btn">View Project</a>
             </div>
-            {% endfor %}
-         </div>
-
+        </div>
+        {% endfor %}
     </div>
 </section>
-
 
 {% endblock %}
