@@ -5,7 +5,7 @@
         "tech": ["Python (Flask)", "MySQL", "Google Analytics Data API", "HTML", "CSS", "JavaScript"],
         "image": "dashboard.png",
         "slug": "fyp",
-        "detail_image": "dashboard_full.png",
+        "detail_image": "dashboard_details.png",
         "overview": "This project involved collaborating with a real client - Qinetics Solutions Sdn. Bhd. - to redesign and improve their corporate website. The main objectives were to enhance user experience, optimize SEO performance, and develop a secure Admin Dashboard for internal data analysis and job listing management.\nI was mainly responsible for backend development and for buidling the Analytics Dashboard, which is powered by Google Analytics 4 (GA4). The dashboard provides detailed insights such as visitor statistics, engagement rates, traffic sources and page performance through interactive visualizations.",
         "challenges_solutions": "One of the major challenges was handling sensitive and incomplete analytics data. During testing, some GA4 data occasionally appeared as \"not set\" or empty values. To ensure data reliability, I implemented a cachiing system that refreshes the analytics data automatically. \nAnother challenge was the dashboard's loading delay caused by live GA4 fetching. To solve this, I used Flask-Caching with background threading, allowing the system to preload data - resulting in a smoother user experience.",
         "outcomes": "Through this project, I gained valuable hands-on experience working with a real company and understanding client requirements. I improved my technical skills in Flask, Google Analytics API, and data visualization, while also learning how to communicate effectively with clients and teammates. \nThis project strengthened both my technical problem-solving and project coordication skills - bridging the gap between academic learning and real-world application."
@@ -22,37 +22,48 @@
         "outcomes": "The project successfully produced a fully functional smart garage prototype that supports automatic gate operation, vehicle detection, and motion-activated lighting. The integration of edge and cloud computing allowed users to monitor and control the system remotely through both web and cloud dashboards. The solution not only improved convenience and safety but also demonstrated the potential of IoT in creating reliable and autonomous home automation systems."
     },
     {
-        "title": "Project C",
-        "description": "This is Project C description",
-        "tech": ["MQTT", "SQL", "JavaScript"],
+        "title": "Mobile Calculator App",
+        "description": "An intuitive Xamarin-based mobile calculator with enhanced functions and error handling for smooth everyday calculations.",
+        "tech": ["C#", "Xamarin.Forms"],
         "image": "calculatorSmall.png",
-        "slug": "#",
-        "detail_image": "calculator.png",
-        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
-        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
-        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
+        "slug": "calc",
+        "detail_image": "calculator_details.png",
+        "overview": "This project involved developing a functional and user-friendly calculator application using Xamarin.Forms. The app performs basic arithmetic operations such as addition, subtraction, multiplication, and division. It features a clean and intuitive user interface designed for smooth operation on mobile devices, with additional functions like clear, delete, percentage, double zero, and previous history display. The goal was to provide an efficient and visually appealing mobile calculator that enhances convenience for everyday arithmetic tasks.",
+        "challenges_solutions": "The main challenges was implementing logical operations accurately while maintaining clear separation between UI and logic. I solved this by structuring the program with separate XAML and C# files, where the XAML handled visual layout and the C# code handled calculator logic, button events, and error checking.",
+        "outcomes": "The final application successfully performs accurate calculations and provides a seamless user experience with responsive design and smooth interactions. It includes enhanced usability features such as delete and clear options, percentage calculation, and a previous history display for reviewing operations."
     },
     {
-        "title": "Project D",
-        "description": "This is Project D description",
-        "tech": ["MQTT", "SQL", "JavaScript"],
-        "image": "music_discovery_app.png",
-        "slug": "#",
-        "detail_image": "dashboard.png",
-        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
-        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
-        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
+        "title": "Coffee Bean & Tea Leaf Mobile Application",
+        "description": "An Android-based ordering and management system for Coffee Bean & Tea Leaf Malaysia, featuring real-time Firebase integration for customers and admins.",
+        "tech": ["Java", "XML", "Firebase"],
+        "image": "coffee_bean.png",
+        "slug": "coffee_bean",
+        "detail_image": "coffee_bean.png",
+        "overview": "This project focuses on designing and developing a Coffee Bean & Tea Leaf mobile application specifically for Malaysian users. Unlike existing regional versions in Singapore or Brunei, this application was built to enhance convenience for local coffee lovers by enabling them to browse menus, customize drinks, place orders, and make payments seamlessly. The system includes both customer and admin applications — the customer app allows users to order and redeem rewards, while the admin app manages menus, rewards, and orders in real-time. The project aims to deliver a smooth and visually engaging experience while addressing gaps in current coffee-ordering apps.",
+        "challenges_solutions": "One major challenge was developing two separate but interconnected applications (Admin and Customer) that synchronized data accurately. To resolve this, we utilized Firebase for real-time database management and cloud storage, ensuring instant updates between both applications. Another challenge was implementing smooth payment and ordering processes without lag or data loss. This was addressed through careful UI/UX optimization and backend validation to maintain stability and prevent transaction errors.",
+        "outcomes": "The final system successfully provides a fully functional dual-application platform. The customer app enables easy browsing, ordering, and reward redemption, while the admin app simplifies content and order management. With Firebase integration, all data including menus, users, and rewards is synchronized in real time. The system improves the customer experience by offering multiple payment methods, reward tracking, and a clear ordering flow, creating a more efficient and enjoyable coffee-ordering experience for Malaysian users."
     },
     {
-        "title": "Project E",
+        "title": "Music Discovery Log App",
+        "description": "A Kotlin-based Android app for tracking and organizing songs with real-time Firebase integration and MVVM architecture.",
+        "tech": ["Kotlin", "Firebase Firestore"],
+        "image": "music_discovery.png",
+        "slug": "music_discovery_log",
+        "detail_image": "music_discovery.png",
+        "overview": "The Music Discovery Log is an Android application designed to help users track, organize, and rediscover their favorite songs. It allows users to add, rate, and categorize music by genre and mood, mark favorites, and search through their collection easily. Built with Kotlin and Firebase Firestore, the app adopts the MVVM architecture for clean state management and real-time synchronization. The goal of this project was to provide music lovers with a centralized platform to manage their personal music discoveries while showcasing modern Android development best practices.",
+        "challenges_solutions": "One of the key challenges was ensuring real-time synchronization and state management across multiple fragments. To solve this, the app implemented the MVVM architecture with LiveData and ViewModel, ensuring that UI components update reactively as data changes.",
+        "outcomes": "The completed application successfully allows users to log, search, and manage songs in real time with a clean, intuitive interface. Features such as mood-based categorization, 5-star rating, favorites management, and live search filtering enhance usability. The project demonstrates strong understanding of modern Android architecture and Firebase integration,"
+    },
+    {
+        "title": "Music Discovery Log App",
         "description": "This is Project E description",
-        "tech": ["MQTT", "SQL", "JavaScript"],
-        "image": "music_discovery_app.png",
+        "tech": ["Kotlin", "Firebase Firestore"],
+        "image": "smart_parking_system.png",
         "slug": "#",
-        "detail_image": "dashboard.png",
-        "overview": "THIS IS OVERVIEW SECTION ADJHASDHAHSDHASD",
-        "challenges_solutions": "THIS IS CHALLENGES fsjkdhfjshdjfhsjdhfjhsd",
-        "outcomes": "hfskhdfshd fhjksdhfkjshdjkfh fksdhjkfhsdfh"
+        "detail_image": "smart_parking_system.png",
+        "overview": "The Music Discovery Log is an Android application designed to help users track, organize, and rediscover their favorite songs. It allows users to add, rate, and categorize music by genre and mood, mark favorites, and search through their collection easily. Built with Kotlin and Firebase Firestore, the app adopts the MVVM architecture for clean state management and real-time synchronization. The goal of this project was to provide music lovers with a centralized platform to manage their personal music discoveries while showcasing modern Android development best practices.",
+        "challenges_solutions": "One of the key challenges was ensuring real-time synchronization and state management across multiple fragments. To solve this, the app implemented the MVVM architecture with LiveData and ViewModel, ensuring that UI components update reactively as data changes.",
+        "outcomes": "The completed application successfully allows users to log, search, and manage songs in real time with a clean, intuitive interface. Features such as mood-based categorization, 5-star rating, favorites management, and live search filtering enhance usability. The project demonstrates strong understanding of modern Android architecture and Firebase integration,"
     }
 
 ]

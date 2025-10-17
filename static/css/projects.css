@@ -39,7 +39,6 @@
 .Myproject-image img {
 width: 100%; /* Ensures the image takes full width of its container */
     height: 350px; /* <--- Use a moderate height for a "normal card grid size" */
-    object-fit: cover; /* Keeps the image sharp and fills the space */
     border-radius: 8px;
     display: block;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
