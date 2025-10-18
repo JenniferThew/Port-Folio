@@ -116,6 +116,5 @@
     .sidebar {
         /* Remove sticky positioning on mobile and place it near the top */
         position: static;
-        order: -1; 
     }
 }

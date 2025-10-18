@@ -1,4 +1,4 @@
-from flask import Flask,  render_template
+from flask import Flask,  render_template, abort
 import json
 
 app = Flask(__name__)
@@ -37,9 +37,13 @@ def project_detail(slug):
     project = next((p for p in projects if p["slug"] == slug), None)
 
     if not project:
-        ConnectionAbortedError(404)
+        abort(404)
     
     return render_template("project_detail.html", project=project)
+
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
