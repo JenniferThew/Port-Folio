@@ -1,8 +1,11 @@
 .about_me-wrapper {
-  background: linear-gradient(to right, #1173d4, #00c6ff); /* gradient border */
-  padding: 4px; /* thickness of the border */
-  border-radius: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    padding: 4px;
+    background: #101922;
+    overflow: hidden;
 }
+
 
 .about_me {
     position: relative;
@@ -49,7 +52,7 @@
   font-weight: 900;
   letter-spacing: -0.5px;
   font-family: 'Space Grotesk', sans-serif;
-  background: linear-gradient(to bottom right, #ffffff, #cbd5e1, #1173d4);
+  background: linear-gradient(to bottom right, #ffffff, #748fb0, #1173d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
