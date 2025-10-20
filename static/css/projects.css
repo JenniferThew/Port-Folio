@@ -25,20 +25,17 @@
     display: flex; /* Image and Content side-by-side */
     align-items: center; 
     border-radius: 12px;
-    background-color: transparent; /* Card background is part of the image/container */
-    /* Use a fixed height or min-height if all projects should look uniform */
+    background-color: transparent;
 }
 
-/* --- Image Container Styling (The green/white boxes) --- */
 .Myproject-image {
-    flex: 1; /* Takes up half the space */
+    flex: 1; 
     min-width: 30%;
-    /* No padding here, the image itself fills the space */
 }
 
 .Myproject-image img {
-width: 100%; /* Ensures the image takes full width of its container */
-    height: 350px; /* <--- Use a moderate height for a "normal card grid size" */
+    width: 100%;
+    height: 350px; 
     border-radius: 8px;
     display: block;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
@@ -46,8 +43,8 @@ width: 100%; /* Ensures the image takes full width of its container */
 
 /* --- Content Container Styling --- */
 .Myproject-content {
-    flex: 1; /* Takes up the other half of the space */
-    padding: 0 40px; /* Space around the text content */
+    flex: 1; 
+    padding: 0 40px; 
     text-align: left;
 }
 
@@ -70,7 +67,7 @@ width: 100%; /* Ensures the image takes full width of its container */
     font-size: 0.95em;
     font-weight: 500;
     margin: 0;
-    color: #1173d4; /* Bright color for technology names */
+    color: #1173d4;
 }
 
 /* --- "View Project" Button Styling --- */
@@ -78,26 +75,21 @@ width: 100%; /* Ensures the image takes full width of its container */
     display: inline-block;
     margin-top: 25px;
     padding: 8px 0;
-    color: #1173d4; /* Text color matching tech stack */
+    color: #1173d4; 
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid #1173d4; /* Border for the button */
+    border: 1px solid #1173d4; 
     border-radius: 4px;
-    width: 150px; /* Fixed width for uniform buttons */
+    width: 150px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .project-btn:hover {
     background-color: #1173d4;
-    color: #121212; /* Dark background on hover */
+    color: #121212; 
 }
 
-/* ------------------------------------- */
-/* --- ZIG-ZAG (ALTERNATING) LAYOUT --- */
-/* ------------------------------------- */
-
-/* Apply this class to every second card using Jinja's 'loop.index is odd' */
 .Myproject-card.reverse {
     /* Reverses the order of the flex items: Content on Left, Image on Right */
     flex-direction: row-reverse; 
@@ -105,8 +97,8 @@ width: 100%; /* Ensures the image takes full width of its container */
 
 /* Adjust padding for reversed layout */
 .Myproject-card.reverse .Myproject-content {
-    padding: 0 40px; /* Maintain padding */
-    text-align: left !important; /* Align text to the right when content is on the left side */
+    padding: 0 40px; 
+    text-align: left !important; 
 }
 
 /* --- Media Queries for Responsiveness --- */
@@ -124,8 +116,8 @@ width: 100%; /* Ensures the image takes full width of its container */
 
     .Myproject-content,
     .Myproject-card.reverse .Myproject-content {
-        padding: 0; /* Remove horizontal padding */
-        text-align: left; /* Always align text left on mobile */
+        padding: 0;
+        text-align: left; 
     }
 
     .project-btn {
