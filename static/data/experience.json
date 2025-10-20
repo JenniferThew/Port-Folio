@@ -1,32 +1,32 @@
 [
   {
-    "title": "Scrum Master in FYP project",
+    "title": "Lead Programmer - Bachelor FYP",
+    "type": "Final Year Project",
+    "icon": "fa-code",
+    "points": [
+      "Led the development of core application logic using Python and Flask web framework.",
+      "Designed and implemented a scalable backend architecture to support growing user demands.",
+      "Collaborated with cross-functional team members to deliver a functional prototype that enhanced efficiency and user experience."
+    ]
+  },
+  {
+    "title": "Scrum Master - Bachelor FYP",
     "type": "Final Year Project",
     "icon": "fa-users",
     "points": [
-      "Facilitated Agile ceremonies including daily stand-ups, sprint planning, and retrospectives.",
-      "Coordinated team efforts to ensure timely delivery of project milestones.",
-      "Managed the product backlog and removed impediments to optimize workflow and productivity."
+      "Facilitated Agile practices by organizing sprint planning, daily stand-ups, and retrospectives.",
+      "Coordinated task allocation and progress tracking to maintain project momentum.",
+      "Ensured effective team communication and delivered project milestones on time."
     ]
   },
   {
-    "title": "Lead Programmer in Qientics project",
-    "type": "Academic Project",
-    "icon": "fa-code",
+    "title": "Project Leader - Diploma FYP",
+    "type": "Final Year Project",
+    "icon": "fa-clipboard-list",
     "points": [
-      "Led the development of the core application logic using Python and Django.",
-      "Designed and implemented the database schema, developed RESTful APIs, and integrated third-party services.",
-      "Mentored junior developers and conducted code reviews to maintain code quality."
-    ]
-  },
-  {
-    "title": "Leader in Coffee Bean project",
-    "type": "Personal Project",
-    "icon": "fa-rocket",
-    "points": [
-      "Conceptualized and led a team to build a mobile application for coffee enthusiasts.",
-      "Defined the project vision and managed the project timeline.",
-      "Successfully launched the app on the Google Play Store using React Native and Node.js."
+      "Led a team in developing and delivering the final year project within scope and timeline.",
+      "Managed task allocation and progress tracking to ensure efficient workflow.",
+      "Fostered team collaboration and communication to achieve successful project completion."
     ]
   }
 ]

@@ -1,7 +1,7 @@
 .header{
     /* background-color: #101922; */
     /* border-bottom: 2px solid rgba(17, 115, 212, 0.2); */
-    padding: 1.5rem 2.5rem;
+    padding: 0.8rem 2.5rem;
     color: white;
     z-index: 10;
     position: sticky;
@@ -18,6 +18,35 @@
 
 }
 
+.brand-link {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.brand-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #1173d4, #00c6ff);
+    transition: width 0.3s ease;
+}
+
+.brand-link:hover {
+    color: #00c6ff;
+}
+
+.brand-link:hover::after {
+    width: 100%;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -32,41 +61,82 @@
   color: white;
 }
 
-.nav-links ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ .nav-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  /* color: rgba(255, 255, 255, 0.6); */
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ffffff;
+/* Underline effect for regular links */
+.nav-links a:not(.resume-btn)::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #1173d4, #00c6ff);
+    transition: width 0.3s ease;
 }
+
+.nav-links a:not(.resume-btn):hover::before {
+    width: 100%;
+}
+
+.nav-links a:not(.resume-btn):hover {
+    color: #00c6ff;
+    transform: translateY(-2px);
+}
+
 
 .resume-btn {
-  background-color: #1173d4;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
+    padding: 0.6rem 1.5rem !important;
+    background: linear-gradient(135deg, #1173d4, #00c6ff);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00c6ff, #00fff2);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.resume-btn:hover::before {
+    left: 0;
 }
 
 .resume-btn:hover {
-  transform: scale(1.05);
-  background-color: #0e5fb0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
 }
-
 .section-title {
   text-align: center;
   font-size: 2.5rem;
