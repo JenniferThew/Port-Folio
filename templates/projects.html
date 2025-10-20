@@ -12,7 +12,7 @@
             <div class="Myproject-image">
                 <img src="{{ url_for('static', filename='images/' ~ project.image) }}" alt="{{ project.title }}">
             </div>
-            <div class="Myproject-content">
+            <div class="Myproject-content fade-in-up">
                 <h3>{{ project.title}}</h3>
                 <p class="tech-stack-header">
                     {% for tech in project.tech %}

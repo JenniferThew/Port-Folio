@@ -12,9 +12,9 @@
 {% block content %}
 
 <section class="project-detail-section">
-    <h1 class="project_detail-title">Project: {{ project.title }}</h1>
+    <h1 class="project_detail-title fade-in-up">Project: {{ project.title }}</h1>
     
-    <div class="project_detail-hero">
+    <div class="project_detail-hero scale-in">
         <img 
             src="{{ url_for('static', filename='images/' ~ project.detail_image) }}" 
             alt="{{ project.title }} screenshot" 
@@ -26,24 +26,24 @@
         
         <div class="main-details">
             
-            <div class="content_detail-block">
+            <div class="content_detail-block fade-in-left">
                 <h2>Overview</h2>
                 <p>{{ project.overview }}</p>
             </div>
 
-            <div class="content_detail-block">
+            <div class="content_detail-block fade-in-left">
                 <h2>Challenges and Solutions</h2>
                 <p>{{ project.challenges_solutions }}</p>
             </div>
 
-            <div class="content_detail-block">
+            <div class="content_detail-block fade-in-left">
                 <h2>Outcomes</h2>
                 <p>{{ project.outcomes }}</p>
             </div>
             
         </div>
         
-        <div class="sidebar">
+        <div class="sidebar fade-in-right">
             
             <div class="tech-used-block">
                 <h3>Technologies Used</h3>

@@ -4,8 +4,6 @@
     padding: 60px 20px;
 }
 
-/* --- Title & Hero Image --- */
-
 .project_detail-title {
     font-size: 3em;
     font-weight: 700;
@@ -30,11 +28,7 @@
     width: 100%;
     height: 100%;
     display: block;
-    /* object-fit: cover; */
 }
-
-
-/* --- Content Grid Layout (The core structure) --- */
 
 .project_detail-content-grid {
     display: grid;
@@ -46,8 +40,6 @@
 
 
 /* --- Left Column: Main Details (Overview, Challenges, Outcomes) --- */
-
-
 
 .content_detail-block {
     margin-bottom: 40px; /* Space between the text sections */
@@ -114,7 +106,6 @@
     }
 
     .sidebar {
-        /* Remove sticky positioning on mobile and place it near the top */
         position: static;
     }
 }
